@@ -27,18 +27,64 @@
         <h2>主なプロジェクト</h2>
 
         <section class="project">
-            <h3>PHPによる動的Webカレンダー</h3>
-            <p>
-                （ここにPHPカレンダーのスクリーンショット画像などを貼る）
-            </p>
-            <p>
-                PHPとMySQLを使用して構築した、予定のCRUD（作成・読み取り・更新・削除）が可能なWebカレンダーです。
-            </p>
-            <ul>
-                <li><b>使用技術:</b> PHP, MySQL, HTML, CSS</li>
-                <li><b>工夫した点:</b> （ここに工夫した点を書く）</li>
-                <li><b>苦労した点:</b> （ここに苦労した点を書く）</li>
-            </ul>
+                <h3>PHPによる動的Webカレンダー（CRUD機能実装）</h3>
+
+                <img src="https://github.com/user-attachments/assets/dc784b5e-bcef-4e3e-a983-421bd0afcb09" alt="Webカレンダーの動作デモ" style="width:100%; max-width:600px; border: 1px solid #ccc;">
+                <p style="text-align: center; font-style: italic;">カレンダー画面</p>
+
+                <img src="https://github.com/user-attachments/assets/3bd0cfb0-063c-448d-a1d0-4906a3ff5a3c" alt="Webカレンダーの動作デモ" style="width:100%; max-width:600px; border: 1px solid #ccc;">
+                <p style="text-align: center; font-style: italic;">予定フォーム画面</p>
+
+                <img src="https://github.com/user-attachments/assets/bc1cdd61-bf7d-4e9f-b612-e38f3807ab7a" alt="Webカレンダーの動作デモ" style="width:100%; max-width:600px; border: 1px solid #ccc;">
+                <p style="text-align: center; font-style: italic;">入力内容確認画面</p>
+
+                <img src="https://github.com/user-attachments/assets/ee5f2e54-823f-4b9e-b19c-7e4ff458a4a4" alt="Webカレンダーの動作デモ" style="width:100%; max-width:600px; border: 1px solid #ccc;">
+                <p style="text-align: center; font-style: italic;">追加完了画面</p>
+
+                <img src="https://github.com/user-attachments/assets/e633b76c-1778-4893-bb92-dfa5acb90533" alt="Webカレンダーの動作デモ" style="width:100%; max-width:600px; border: 1px solid #ccc;">
+                <p style="text-align: center; font-style: italic;">予定表示画面</p>
+
+
+                <p>
+                    サーバーサイド技術の学習と実践のため、PHPとMySQLを使用して動的なWebカレンダーを開発しました。
+                    ユーザーが日付をクリックすることで、その日の予定を直感的に管理（登録・編集・削除）できるWebアプリケーションです。
+                </p>
+                <ul>
+                    <li>
+                        <b>使用技術:</b> PHP, MySQL, HTML/CSS
+                    </li>
+                    <li>
+                        <b>主な機能:</b>
+                        <ul>
+                            <li>カレンダーの月次表示（前月・次月へのナビゲーション）</li>
+                            <li>日付ごとの予定の登録、表示</li>
+                            <li>予定の編集・削除機能 (CRUD)</li>
+                            <li>（もしあれば：セッションを利用した簡易ログイン機能）</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>工夫した点・アピールポイント:</b>
+                        <ul>
+                            <li>
+                                <strong>カレンダーロジックの実装:</strong> PHPの`DateTime`クラスを利用し、うるう年や月の初日の曜日を正確に計算し、カレンダーを動的に描画するロジックを自作しました。
+                            </li>
+                            <li>
+                                <strong>セキュリティ対策:</strong> データベース操作はすべてPDO（プリペアドステートメント）を使用し、フォームからの入力値は適切にエスケープ処理（`htmlspecialchars`など）を行うことで、SQLインジェクションやXSS（クロスサイトスクリプティング）の基本的な対策を実装しました。
+                            </li>
+                            <li>
+                                <strong>UI/UXの工夫:</strong> カレンダーの色味が最初はシンプルなものだったのですが、そちらを見やすくするために各項目の色分けをし、また色についても視覚的にすっきりとした配色に変更しました。
+                                各ページにおいてもレイアウトをシンプルでモダンなデザインにすることで、ユーザーが直感的に操作できるよう工夫しました。
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>開発で苦労した点:</b>
+                        <p>
+                            カレンダーの日付マスと、データベースから取得した「その日の予定」を正しく紐づけて表示するロジックに苦労しました。最終的に、日付をキーにした連想配列に予定情報を格納することで解決しました。
+                            最初は、その日に対する祝日の計算などに第一月曜日である日などに対するStyleなどの割り当てがむづかしく、苦労しましたが、日付を連想配列のキーにすることでその日が何月なのか、何週目なのか、何日なのか、何曜日なのかを判別し、スタイルの割り当てを行うことができました。
+                        </p>
+                    </li>
+                </ul>
             <a href="https://github.com/PANAKA-4696/Web_calendar" target="_blank">ソースコードを見る (GitHub)</a>
         </section>
 

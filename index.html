@@ -62,7 +62,6 @@
                             <li>カレンダーの月次表示（前月・次月へのナビゲーション）</li>
                             <li>日付ごとの予定の登録、表示</li>
                             <li>予定の編集・削除機能 (CRUD)</li>
-                            <li>（もしあれば：セッションを利用した簡易ログイン機能）</li>
                         </ul>
                     </li>
                     <li>
@@ -112,7 +111,8 @@
                 <img src="https://github.com/user-attachments/assets/52180b30-9687-4c13-9457-a82646d143ea" alt="カルテ画面2" style="width:100%; max-width:300px; border: 1px solid #ccc; margin: 0 auto; display: block;">
                 <p style="text-align: center; font-style: italic;">カルテ画面2</p>
 
-                <img src="https://github.com/user-attachments/assets/9c1b1abf-cf3d-483c-bd36-c0006e941dc1" alt="GoogleDrive保存・取得" style="width:100%; max-width:300px; border: 1px solid #ccc; margin: 0 auto; display: block;"><p>GoogleDrive保存・取得</p>
+                <img src="https://github.com/user-attachments/assets/9c1b1abf-cf3d-483c-bd36-c0006e941dc1" alt="GoogleDrive保存・取得" style="width:100%; max-width:300px; border: 1px solid #ccc; margin: 0 auto; display: block;">
+                <p style="text-align: center; font-style: italic;">GoogleDrive保存・取得</p>
 
                 <p>
                     Androidネイティブアプリ開発の学習と実践のため、Kotlinを使用して問診票（アンケート）アプリを開発しました。
@@ -151,8 +151,10 @@
                     </li>
                     <li>
                         <b>工夫した点・アピールポイント:</b>
-                        目的としてある、コスト面の課題を考え、デバイス自体をAndroidを選ぶことで、iOSに比べて端末価格を抑え、アプリ自体も自身で作成することで、ランニングコストを抑えることに成功しました。
-                        さらにバックアップとしてのGoogle Driveへのエクスポート機能を実装することで、データの安全性も確保しながら、バックアップへのコストをゼロに抑えることができました。
+                        <p style="margin-top: 5px;">
+                            目的としてある、コスト面の課題を考え、デバイス自体をAndroidを選ぶことで、iOSに比べて端末価格を抑え、アプリ自体も自身で作成することで、ランニングコストを抑えることに成功しました。
+                            さらにバックアップとしてのGoogle Driveへのエクスポート機能を実装することで、データの安全性も確保しながら、バックアップへのコストをゼロに抑えることができました。
+                        </p>
                         <ul>
                             <li>
                                 <strong>画面遷移の実装:</strong> 複数のActivity（またはFragment）間でのデータ受け渡しを`Intent`（や`Bundle`）を使い、アプリの状態を正しく管理しながら画面を遷移させるロジックを実装しました。
@@ -172,7 +174,8 @@
                     <li>
                         <b>開発で苦労した点:</b>
                         <p>
-                            （例：アプリのライフサイクル（`onCreate`, `onPause`など）の理解に苦労しました。特に、画面を回転させた際にデータが消えてしまう問題がありましたが、`onSaveInstanceState`（またはViewModel）を利用して状態を保持する方法を学び、解決しました。）
+                            GoogleDriveAPIの認証フローと非同期処理の実装に苦労しました。特に、OAuth 2.0を用いたユーザー認証とトークン管理の部分で多くの試行錯誤がありました。
+                            AIや、ネットの情報を駆使して、mainActivityでの認証の処理や、database_helperでのデータベースの作成、管理の部分をできる部分から作成していき、最終的にはbuilderなどを使用して、GoogleDriveAPIの認証フローを実装することができました。
                         </p>
                     </li>
                 </ul>

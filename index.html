@@ -92,18 +92,90 @@
         </section>
 
         <section class="project">
-            <h3>Androidアプリ「（ここにアプリ名を書く）」</h3>
-            <p>
-                （ここにアプリのスクリーンショットやGIF動画などを貼る）
-            </p>
-            <p>
-                Kotlinを使用して開発したAndroidネイティブアプリです。（ここにアプリの簡単な説明を書く）
-            </p>
-            <ul>
-                <li><b>使用技術:</b> Kotlin, Android Studio, SQLite など</li>
-                <li><b>工夫した点:</b> （ここに工夫した点を書く）</li>
-                <li><b>苦労した点:</b> （ここに苦労した点を書く）</li>
-            </ul>
+                <h3>Androidアプリ「問診票アプリ (Questionnaire_App)」</h3>
+
+                <img src="https://github.com/user-attachments/assets/1a413eca-8144-4892-8411-db7d05eea408" alt="メイン画面" style="width:100%; max-width:300px; border: 1px solid #ccc; margin: 0 auto; display: block;">
+                <p style="text-align: center; font-style: italic;">メイン画面</p>
+
+                <img src="https://github.com/user-attachments/assets/1c5a0c6c-a101-4812-843b-337b267a1a97" alt="新規登録画面" style="width:100%; max-width:300px; border: 1px solid #ccc; margin: 0 auto; display: block;">
+                <p style="text-align: center; font-style: italic;">新規登録画面</p>
+
+                <img src="https://github.com/user-attachments/assets/93917a2b-3bb4-478c-a947-ef9ff3597378" alt="登録内容確認画面" style="width:100%; max-width:300px; border: 1px solid #ccc; margin: 0 auto; display: block;">
+                <p style="text-align: center; font-style: italic;">登録内容確認画面</p>
+
+                <img src="https://github.com/user-attachments/assets/a7165937-27f1-4162-aa7f-383879587bb8" alt="既存顧客選択画面" style="width:100%; max-width:300px; border: 1px solid #ccc; margin: 0 auto; display: block;">
+                <p style="text-align: center; font-style: italic;">既存顧客選択画面</p>
+
+                <img src="https://github.com/user-attachments/assets/8e90db63-42b9-49b8-94dc-f0b668c68635" alt="カルテ画面" style="width:100%; max-width:300px; border: 1px solid #ccc; margin: 0 auto; display: block;">
+                <p style="text-align: center; font-style: italic;">カルテ画面</p>
+
+                <img src="https://github.com/user-attachments/assets/52180b30-9687-4c13-9457-a82646d143ea" alt="カルテ画面2" style="width:100%; max-width:300px; border: 1px solid #ccc; margin: 0 auto; display: block;">
+                <p style="text-align: center; font-style: italic;">カルテ画面2</p>
+
+                <img src="https://github.com/user-attachments/assets/9c1b1abf-cf3d-483c-bd36-c0006e941dc1" alt="GoogleDrive保存・取得" style="width:100%; max-width:300px; border: 1px solid #ccc; margin: 0 auto; display: block;"><p>GoogleDrive保存・取得</p>
+
+                <p>
+                    Androidネイティブアプリ開発の学習と実践のため、Kotlinを使用して問診票（アンケート）アプリを開発しました。
+                    実際に父親の使っている問診票をDX化させ、紙ベースの問診票をアプリで代替することを目的としたアプリケーションです。
+                    それに加えてデータで管理することで、過去の問診票の履歴を簡単に参照できるようにし、顧客の管理、カルテの管理を同時に効率化することを目指しました。
+                </p>
+                <p>
+                    <b>課題:</b>
+                    私の父親が経営している接骨院では、紙ベースの問診票を使用しており、患者の情報管理や過去の問診票の参照が煩雑で非効率的でした。その紙ベースの問診票が100枚を超えたことを期に、デジタル化の必要性を感じました。そのため、父親に相談の上、問診票アプリの開発を決意しました。
+                </p>
+                <p>
+                    <b>プロジェクトの目的:</b> 
+                    紙ベースの問診票をデジタル化し、患者情報の管理と過去の問診票の参照を効率化すること。また、私の家計的な問題を含めてどれだけコストのかからない方法で実現できるかを考え、アプリ開発を通じて技術力の向上を図ることを目的としました。
+                </p>
+                <ul>
+                    <li>
+                        <b>使用技術:</b>
+                        <ul style="margin-top: 5px; margin-bottom: 5px;">
+                            <li><b>言語:</b> Kotlin</li>
+                            <li><b>UI:</b> Android View System (XML)</li>
+                            <li><b>データベース:</b> SQLite (SQLiteOpenHelper)</li>
+                            <li><b>API・認証:</b> Google Drive API (OAuth 2.0), Google Auth Library</li>
+                            <li><b>非同期処理:</b> Kotlin Coroutines</li>
+                            <li><b>ライブラリ:</b> Gson (JSONパース)</li>
+                            <li><b>IDE:</b> Android Studio</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>主な機能:</b>
+                        <ul style="margin-top: 5px; margin-bottom: 5px;">
+                            <li><b>新規顧客登録機能:</b> 新しいお客様の個人情報を登録します。</li>
+                            <li><b>問診票（カルテ）追記機能:</b> 既存のお客様の問診内容を記録します。</li>
+                            <li><b>顧客情報・問診内容の確認機能:</b> 登録された情報を一覧で確認・検索できます。</li>
+                            <li><b>Google Driveへのバックアップ・復元機能:</b> 端末の故障や買い替えに備え、全データをGoogle Driveに安全に保存・復元できます。</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>工夫した点・アピールポイント:</b>
+                        目的としてある、コスト面の課題を考え、デバイス自体をAndroidを選ぶことで、iOSに比べて端末価格を抑え、アプリ自体も自身で作成することで、ランニングコストを抑えることに成功しました。
+                        さらにバックアップとしてのGoogle Driveへのエクスポート機能を実装することで、データの安全性も確保しながら、バックアップへのコストをゼロに抑えることができました。
+                        <ul>
+                            <li>
+                                <strong>画面遷移の実装:</strong> 複数のActivity（またはFragment）間でのデータ受け渡しを`Intent`（や`Bundle`）を使い、アプリの状態を正しく管理しながら画面を遷移させるロジックを実装しました。
+                            </li>
+                            <li>
+                                <strong>データ永続化:</strong> 回答データを端末内に保存するため、SQLite（またはRoom）を導入し、データベースの設計からCRUD処理までを自力で実装しました。
+                            </li>
+                            <li>
+                                <strong>API連携:</strong> Google Drive APIを利用して、回答データのバックアップ機能を実装しました。これにより、ユーザーは簡単にデータをクラウドに保存・復元できるようになりました。
+                            </li>
+                            <li>
+                                <strong>UI/UXの工夫:</strong> 私の父親が使うということを考慮し、あまりPC操作などに慣れていない方でも直感的に操作できるよう、シンプルで分かりやすいデザインを心がけました。
+                                また、ボタン名などをしっかり考えることで、迷わず操作できるように工夫しました。
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>開発で苦労した点:</b>
+                        <p>
+                            （例：アプリのライフサイクル（`onCreate`, `onPause`など）の理解に苦労しました。特に、画面を回転させた際にデータが消えてしまう問題がありましたが、`onSaveInstanceState`（またはViewModel）を利用して状態を保持する方法を学び、解決しました。）
+                        </p>
+                    </li>
+                </ul>
             <a href="https://github.com/PANAKA-4696/Questionnaire_App" target="_blank">ソースコードを見る (GitHub-問診票アプリ)</a>
         </section>
 
